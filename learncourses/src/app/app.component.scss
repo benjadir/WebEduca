@@ -1,1 +1,144 @@
+*{
+  box-sizing: border-box;
+}
+.header{
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.nav-flex{
+  display: flex;
+  justify-content: space-around;
+
+}
+#idauth{
+  display: flex;
+  justify-content: flex-end;
+}
+.nav-flex #idauth{
+  flex-grow: 1;
+}
+a{
+  text-decoration: none;
+}
+a.brand{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2{
+    margin:0
+  }
+}
+ul.nav,ul.navi{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul.nav li,ul.navi li{
+  display: inline-block;
+  margin-left: 10px;
+  width: 50px;
+  position: relative;
+  top:0px;
+  a{
+
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    font-size: 12px!important;
+    font-weight: 100;
+    //border-bottom: 2px solid transparent;
+    transition: border-bottom,color .4s ease-out;
+  }
+}
+
+a img{
+width:4rem;
+}
+
+ ul.nav li:hover a{
+   color:orange;
+ }
+
+ ul.nav li a::before{
+content: '';
+position: absolute;
+top:35px;
+right: 48%;
+width:1px;
+height: 1px;
+transition: transform .3s ease-in;
+ }
+
+ul.nav li:hover a::before{
+    transform: scaleX(50);
+    background-color: rgb(29, 150, 150);
+   }
+ul.nav li.active a::before{
+  transform: scaleX(50);
+  background-color: rgb(29, 150, 150);
+}
+ul.nav li.active a{
+  color:orange;
+}
+
+@media(min-width:992px){
+  .container{
+    margin:0 10px 0 10px;
+  }
+}
+
+.fa-sign-in{
+  color:green;
+}
+
+.nav-link{
+  font-size: 12px;
+}
+
+button[color]{
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+ul.navi li{
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  align-items: center;
+}
+ul.navi li a.nav-link{
+position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 24px;
+ padding-left: 4px;
+ padding-right: 4px;
+ border: .1px solid rgba(100, 50, 136, 0.493);
+ border-radius: 2px;
+ background-color: transparent;
+ z-index: 5;
+ box-shadow: 1px 1px 2px 0px #5226930c;
+ transition: background-color 0.5s ease;
+
+}
+
+ul.navi li a.nav-link:hover{
+  background-color: indigo;
+  box-shadow: 1px 1px 2px 0px #52269338;
+  color: white;
+}
+
+   ul.navi li:hover a.nav-link{
+
+   }
 
