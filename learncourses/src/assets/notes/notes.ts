@@ -8,7 +8,7 @@
 *-git push [remoteRepoName] [current branch name]
 *-git remote -v :origin  https://github.com/benjadir/WebEduca.git (fetch)
 origin  https://github.com/benjadir/WebEduca.git (push)
-*-git push origin master :take my
+*-git push origin master :take my repo and host it in remote
 
 
 */
