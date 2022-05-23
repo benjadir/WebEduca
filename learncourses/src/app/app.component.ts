@@ -7,8 +7,12 @@ import { Component, ViewEncapsulation } from '@angular/core';
 })
 export class AppComponent {
   title = 'learncourses';
+  Isclicked:boolean=true;
 
   onFilterActivities(type: number){
     console.log(type);
+  }
+  toggleSideBar(){
+    this.Isclicked=!this.Isclicked;
   }
 }
