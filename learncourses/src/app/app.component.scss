@@ -2,11 +2,18 @@
   box-sizing: border-box;
 }
 .header{
+  position:fixed;
+  top:0px;
+  width: 100vw;
   background-color: #f7f7f7;
   display: flex;
   justify-content: center;
   align-content: center;
   align-items: center;
+  box-shadow:0px 1px 13px #00000036;
+}
+main{
+  margin-top: 40px;
 }
 .nav-flex{
   display: flex;
@@ -61,7 +68,7 @@ width:4rem;
 }
 
  ul.nav li:hover a{
-   color:rgb(166, 88, 221);
+   //color:rgb(166, 88, 221);
  }
 
  ul.nav li a::before{
@@ -87,9 +94,7 @@ ul.nav li.active a{
 }
 
 @media(min-width:992px){
-  .container{
-    margin:0 10px 0 10px;
-  }
+
 }
 
 .fa-sign-in{
@@ -143,15 +148,19 @@ ul.navi li a.nav-link:hover{
    }
 
 div.side-nav{
-  width: 160px;
-  background-color: rgb(31, 12, 46);
+  width: 220px;
+  height: calc(100vh - 40*2px);
+  background-color: #f8f6f8f1;;
   box-shadow: 1px 1px 2px 0px rgba(14, 5, 19, 0.267);
   border-radius: 0px 2px 0px 2px;
 
   h3{
     border-bottom: 1px solid rgb(234, 233, 235);
-    padding-left:100px;
-    color:white;
+    padding-left:170px;
+    background-color: rgb(4, 4, 41);
+    mat-icon{
+      color:white;
+    }
   }
   p{
     padding-left:8px;
@@ -163,27 +172,31 @@ div.side-nav{
 
 .side-nav{
 //box-shadow: 1px 1px 1px rgba(76, 0, 130, 0.288);
-position: relative;
+position: fixed;
+top:40px;
+z-index: 800;
 left:-500px;
 transition: left .5s ease ;
   }
 
   .show{
    //@include box-shadow: 1px 1px 1px rgba(76, 0, 130, 0.288);
+   transition: left .5s ease ;
   left: 0px;
-    background-color: #161620f1;
+    background-color: #f6f6f8f1;
     overflow-y: hidden;
     height:fit-content
-
   }
 .hide
 {
-  left:-800px;
+  left:-200px;
 }
 
 div.side-nav ul li a{
   text-decoration: none;
-  color:white;
+  //color:w;
   display: block;
   padding-left: 20px;
+}
+.side-nav ul.nav-side li a{font-size: 12px;
 }
