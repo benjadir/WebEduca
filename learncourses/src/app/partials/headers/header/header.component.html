@@ -1,0 +1,60 @@
+<header class="header">
+  <button mat-icon-button color="primary" (click)="toggleSideBar()" aria-label="Example icon button with a menu icon">
+    <mat-icon color="accent">
+        apps
+    </mat-icon>
+  </button>
+  <div class="container">
+    <div class="nav-flex">
+
+      <a href="/" class="brand">
+      <img src="../assets/images/logo.svg">
+      </a>
+
+      <ul class="nav">
+        <li><a routerLink="/home" class="nav-link">Home</a></li>
+        <li><a routerLink="/feature" class="nav-link">Features</a></li>
+        <li><a routerLink="/pricing" class="nav-link">Pricing</a></li>
+        <li><a routerLink="/faq" class="nav-link">FAQs</a></li>
+        <li><a routerLink="/about" class="nav-link">About</a></li>
+      </ul>
+        <ul class="navi" id="idauth">
+          <li class=""><a (click)="redirectReq('login')" [ngClass]="{'active':clickedHere.button1}"   class="nav-link">Sign in</a></li>
+          <li><a
+            (click)="redirectReq('register')"
+            [ngClass]="{'active':clickedHere.button2}"
+            class="nav-link">Sign up</a></li>
+        </ul>
+
+      <!-- <span class="btn-menu">
+        <span ></span>
+        <span></span>
+        <span></span>
+      </span> -->
+      <i class="fas fa-bars " style="display: none;"></i>
+    </div>
+  </div>
+</header>
+<div class="side-nav" [ngClass]="{'show':Isclicked}">
+  <h3>
+  <button mat-icon-button color="primary" (click)="toggleSideBar()" aria-label="Example icon button with a menu icon">
+    <mat-icon>
+      keyboard_double_arrow_left
+    </mat-icon>
+  </button>
+</h3>
+  <ul class="nav-side">
+    <li><a routerLink="/a" class="nav-link">Computer science</a></li>
+    <li><a routerLink="/b" class="nav-link">Economics</a></li>
+    <li><a routerLink="/v" class="nav-link">Languages</a></li>
+    <li><a routerLink="/c" class="nav-link">religion</a></li>
+    <li><a routerLink="/d" class="nav-link">About</a></li>
+    <li><a routerLink="/x" class="nav-link">Pricing</a></li>
+    <li><a routerLink="/z" class="nav-link">FAQs</a></li>
+    <li><a routerLink="/q" class="nav-link">About</a></li>
+    <li><a routerLink="/e" class="nav-link">Pricing</a></li>
+    <li><a routerLink="/r" class="nav-link">FAQs</a></li>
+
+  </ul>
+</div>
+

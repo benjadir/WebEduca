@@ -1,14 +1,11 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatButtonModule} from '@angular/material/button';
+import { HeadersModule } from './partials/headers/headers.module';
 
-import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -18,11 +15,10 @@ import {MatIconModule} from '@angular/material/icon';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatGridListModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule
+    HeadersModule
+
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
