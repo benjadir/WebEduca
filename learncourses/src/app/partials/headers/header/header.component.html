@@ -4,38 +4,44 @@
         apps
     </mat-icon>
   </button>
+   <a href="/" class="brand">
+      <img src="../assets/images/logo.svg">
+    </a>
+    <i class="fas fa-bars" style="display: block;"></i>
+
+
   <div class="container">
     <div class="nav-flex">
-
-      <a href="/" class="brand">
+    <div class="overlay"></div>
+      <!-- <a href="/" class="brand">
       <img src="../assets/images/logo.svg">
       </a>
-
+      <i class="fas fa-bars " style="display: inline-block;"></i> -->
       <ul class="nav">
         <li><a routerLink="/home" class="nav-link">Home</a></li>
         <li><a routerLink="/feature" class="nav-link">Features</a></li>
         <li><a routerLink="/pricing" class="nav-link">Pricing</a></li>
-        <li><a routerLink="/faq" class="nav-link">FAQs</a></li>
         <li><a routerLink="/about" class="nav-link">About</a></li>
+        <li><a routerLink="/about" class="nav-link">services</a></li>
       </ul>
-        <ul class="navi" id="idauth">
-          <li class=""><a (click)="redirectReq('login')" [ngClass]="{'active':clickedHere.button1}"   class="nav-link">Sign in</a></li>
+        <ul class="nav" id="idauth">
+          <li class="">
+            <a
+            mat-flat-button color="primary"
+            role="button" (click)="redirectReq('login')" [ngClass]="{'active':clickedHere.button1}" class="nav-link">Sign in</a> </li>
           <li><a
+            role="button"
+            mat-flat-button
+            color="primary"
             (click)="redirectReq('register')"
             [ngClass]="{'active':clickedHere.button2}"
             class="nav-link">Sign up</a></li>
         </ul>
 
-      <!-- <span class="btn-menu">
-        <span ></span>
-        <span></span>
-        <span></span>
-      </span> -->
-      <i class="fas fa-bars " style="display: none;"></i>
     </div>
   </div>
 </header>
-<div class="side-nav" [ngClass]="{'show':Isclicked}">
+<div class="side-nav" [ngClass]="{'show':Isclicked}" style="display: none;">
   <h3>
   <button mat-icon-button color="primary" (click)="toggleSideBar()" aria-label="Example icon button with a menu icon">
     <mat-icon>

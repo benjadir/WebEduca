@@ -33,13 +33,17 @@ $learncourses-theme: mat.define-light-theme((
 // that you are using.
 @include mat.all-component-themes($learncourses-theme);
 
-/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files
 @import url("../src/assets/general/css/normalize.css");
 @import url("../src/assets/general/css/all.min.css");
 @import url("../src/assets/general/css/bootstrap.min.css");
-@import url('../src/assets/general/style.css');
+@import url('../src/assets/general/style.css');*/
+@import url("../src/assets/general/css/all.min.css");
 
 
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+
+ }
+
