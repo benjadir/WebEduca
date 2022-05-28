@@ -83,12 +83,12 @@ i{
 
 .open-nav{
   top:45px;
-  transition: top,.4s ease-in;
+  transition: top,.25s ease-out;
 
 }
 .close-nav{
   top:-445px;
-  transition: top,.3s ease-out;
+  transition: top,.4s ease-in;
 
 }
 header.header span.custom-icon{

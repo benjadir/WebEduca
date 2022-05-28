@@ -7,21 +7,14 @@
    <a href="/" class="brand">
       <img src="../assets/images/logo.svg">
     </a>
-    <!-- <i class="fas fa-bars" style="display: block;"></i> -->
     <span class="custom-icon" [appCustomFabars]="navlabel" [CssLeave]="'close-nav'" [CssEnter]="'open-nav'">
       <span></span>
       <span ></span>
       <span></span>
     </span>
-
-
   <div class="container">
     <div class="nav-flex" #navlabel>
     <div class="overlay"></div>
-      <!-- <a href="/" class="brand">
-      <img src="../assets/images/logo.svg">
-      </a>
-      <i class="fas fa-bars " style="display: inline-block;"></i> -->
       <ul class="nav">
         <li><a routerLink="/home" class="nav-link">Home</a></li>
         <li><a routerLink="/feature" class="nav-link">Features</a></li>
@@ -42,7 +35,6 @@
             [ngClass]="{'active':clickedHere.button2}"
             class="nav-link">Sign up</a></li>
         </ul>
-
     </div>
   </div>
 </header>
