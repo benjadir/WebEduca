@@ -7,11 +7,16 @@
    <a href="/" class="brand">
       <img src="../assets/images/logo.svg">
     </a>
-    <i class="fas fa-bars" style="display: block;"></i>
+    <!-- <i class="fas fa-bars" style="display: block;"></i> -->
+    <span class="custom-icon" [appCustomFabars]="navlabel" [CssLeave]="'close-nav'" [CssEnter]="'open-nav'">
+      <span></span>
+      <span ></span>
+      <span></span>
+    </span>
 
 
   <div class="container">
-    <div class="nav-flex">
+    <div class="nav-flex" #navlabel>
     <div class="overlay"></div>
       <!-- <a href="/" class="brand">
       <img src="../assets/images/logo.svg">
@@ -41,26 +46,5 @@
     </div>
   </div>
 </header>
-<div class="side-nav" [ngClass]="{'show':Isclicked}" style="display: none;">
-  <h3>
-  <button mat-icon-button color="primary" (click)="toggleSideBar()" aria-label="Example icon button with a menu icon">
-    <mat-icon>
-      keyboard_double_arrow_left
-    </mat-icon>
-  </button>
-</h3>
-  <ul class="nav-side">
-    <li><a routerLink="/a" class="nav-link">Computer science</a></li>
-    <li><a routerLink="/b" class="nav-link">Economics</a></li>
-    <li><a routerLink="/v" class="nav-link">Languages</a></li>
-    <li><a routerLink="/c" class="nav-link">religion</a></li>
-    <li><a routerLink="/d" class="nav-link">About</a></li>
-    <li><a routerLink="/x" class="nav-link">Pricing</a></li>
-    <li><a routerLink="/z" class="nav-link">FAQs</a></li>
-    <li><a routerLink="/q" class="nav-link">About</a></li>
-    <li><a routerLink="/e" class="nav-link">Pricing</a></li>
-    <li><a routerLink="/r" class="nav-link">FAQs</a></li>
 
-  </ul>
-</div>
 

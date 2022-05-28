@@ -6,13 +6,15 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import { CustomFabarsDirective } from './custom-fabars.directive';
 
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    HeaderAuthComponent
+    HeaderAuthComponent,
+    CustomFabarsDirective
   ],
   imports: [
     CommonModule,
