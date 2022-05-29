@@ -1,0 +1,42 @@
+<header class="header">
+  <button mat-icon-button color="primary" (click)="toggleSideBar()" aria-label="Example icon button with a menu icon">
+    <mat-icon color="accent">
+        apps
+    </mat-icon>
+  </button>
+   <a href="/" class="brand">
+      <img src="../assets/images/logo.svg">
+    </a>
+    <span class="custom-icon" [appCustomFabars]="navlabel" [CssLeave]="'close-nav'" [CssEnter]="'open-nav'">
+      <span></span>
+      <span ></span>
+      <span></span>
+    </span>
+  <div class="container">
+    <div class="nav-flex" #navlabel>
+    <div class="overlay"></div>
+      <ul class="nav">
+        <li><a routerLink="/home" class="nav-link">Home</a></li>
+        <li><a routerLink="/feature" class="nav-link">Features</a></li>
+        <li><a routerLink="/pricing" class="nav-link">Pricing</a></li>
+        <li><a routerLink="/about" class="nav-link">About</a></li>
+        <li><a routerLink="/about" class="nav-link">services</a></li>
+      </ul>
+        <ul class="nav" id="idauth">
+          <li class="">
+            <a
+            mat-flat-button color="primary"
+            role="button" (click)="redirectReq('login')" [ngClass]="{'active':clickedHere.button1}" class="nav-link">Sign in</a> </li>
+          <li><a
+            role="button"
+            mat-flat-button
+            color="primary"
+            (click)="redirectReq('register')"
+            [ngClass]="{'active':clickedHere.button2}"
+            class="nav-link">Sign up</a></li>
+        </ul>
+    </div>
+  </div>
+</header>
+
+
