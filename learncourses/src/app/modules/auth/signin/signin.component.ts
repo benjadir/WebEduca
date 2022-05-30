@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatFormFieldControl } from '@angular/material/form-field';
 
 @Component({
   selector: 'app-signin',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./signin.component.scss']
 })
 export class SigninComponent implements OnInit {
+  form!:FormGroup;
 
-  constructor() { }
+
+  constructor(private fb:FormBuilder) {
+    this.form = this.fb.group({
+      totalQuantity: [60, [Validators.required, Validators.max(100)]]
+    });
+  }
 
   ngOnInit(): void {
+
   }
 
 }

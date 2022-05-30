@@ -1,0 +1,25 @@
+<div class="choose-quantity">
+  <mat-icon (click)="onRemove()" color="primary">indeterminate_check_box</mat-icon>
+  <div class="quantity">{{quantity}}</div>
+  <mat-icon (click)="onAdd()" color="primary">add_box</mat-icon>
+<!-- <<h3>How to use this reusable componement</h3>
+<div class="container">
+  <div [formGroup]="form">
+    <choose-quantity
+      [increment]="10"
+      formControlName="totalQuantity"
+    ></choose-quantity>
+  </div>
+</div> -->
+<!----TS code for validators
+form!:FormGroup;
+
+
+  constructor(private fb:FormBuilder) {
+    this.form = this.fb.group({
+      totalQuantity: [60, [Validators.required, Validators.max(100)]]
+    });
+  }-->
+
+
+

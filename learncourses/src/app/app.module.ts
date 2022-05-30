@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeadersModule } from './partials/headers/headers.module';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { HeadersModule } from './partials/headers/headers.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HeadersModule
+    HeadersModule,
+    SharedModule
 
   ],
 
