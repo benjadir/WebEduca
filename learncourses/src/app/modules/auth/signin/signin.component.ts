@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MatFormFieldControl } from '@angular/material/form-field';
+import { BehaviorSubject, Observable, Subject, Subscription } from 'rxjs';
+import { Component, HostBinding, OnInit } from '@angular/core';
+import { FormBuilder,FormGroup, Validators, AbstractControl } from '@angular/forms';
 
 @Component({
   selector: 'app-signin',
@@ -8,17 +8,31 @@ import { MatFormFieldControl } from '@angular/material/form-field';
   styleUrls: ['./signin.component.scss']
 })
 export class SigninComponent implements OnInit {
+  @HostBinding('attr.class') varcss="signin";
   form!:FormGroup;
-
+  passobs:BehaviorSubject<any>=new BehaviorSubject<string>('');
+  pasSubs!:Subscription;
+  private password:string='';
+  status:Boolean=true;
 
   constructor(private fb:FormBuilder) {
     this.form = this.fb.group({
-      totalQuantity: [60, [Validators.required, Validators.max(100)]]
+      email:['rida.jeba@gmail.com',[Validators.required,Validators.email]],
+      pass:['',[Validators.required,Validators.minLength(6)]]
     });
   }
 
   ngOnInit(): void {
+    this.form.controls['pass'].valueChanges.subscribe(pass=>{
+      this.password=this.form.controls['pass'].value;
+    });
+  }
+
+  onSubmit(){
+  console.warn(this.form);
 
   }
+  resetForm(){}
+
 
 }

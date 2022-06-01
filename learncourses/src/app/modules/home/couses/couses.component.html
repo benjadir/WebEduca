@@ -1,0 +1,13 @@
+<form [formGroup]="form">
+  <label for="tilid">title</label>
+  <input type="text" id="tilid" placeholder="enter a title" formControlName="title">
+  <label for="story">Tell us your story:</label>
+
+  <textarea id="story" name="story" formControlName="content"
+            rows="5" cols="60">
+  It was a dark and stormy night...
+  </textarea>
+  <div class="form-group d-flex justify-content-evenly">
+    <button type="button" class="btn btn-primary" (click)="sendRequest()">envoyer</button>
+  </div>
+</form>

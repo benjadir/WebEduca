@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, OnInit } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit, HostBinding } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { Subject,BehaviorSubject, Subscription } from 'rxjs';
 
@@ -9,6 +9,7 @@ import { Subject,BehaviorSubject, Subscription } from 'rxjs';
   encapsulation:ViewEncapsulation.Emulated
 })
 export class HeaderComponent implements OnInit {
+  @HostBinding('attr.class') appclass='appClass';
   Isclicked:boolean=false;
   clickedHere:{button1:boolean,button2:boolean}={button1:false,button2:false};
 
@@ -21,18 +22,19 @@ export class HeaderComponent implements OnInit {
     this.Isclicked=!this.Isclicked;
     console.log('isclicked:',this.Isclicked);
   }
-  redirectReq(para:string){
-    console.log('start:::',para);
-    if(para==='login'){
+  redirectReq(authpar:string){
+    if(authpar==='login'){
       this.clickedHere.button1=true;
       this.clickedHere.button2=false;
     }else{
       this.clickedHere.button1=false;
       this.clickedHere.button2=true;
     }
-this.router.navigate(['/auth/'+para]);
+this.router.navigate(['/auth/'+authpar]);
 
-
+  }
+  navigateToLink(navpath:string){
+    this.router.navigate([navpath]);
   }
 
 }

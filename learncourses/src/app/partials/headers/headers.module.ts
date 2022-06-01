@@ -28,7 +28,8 @@ import { CustomFabarsDirective } from './custom-fabars.directive';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    HeaderComponent
+    HeaderComponent,
+    CustomFabarsDirective
 ]
 })
 export class HeadersModule { }

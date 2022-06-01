@@ -4,7 +4,7 @@ import { CustomInputComponent } from './components/custom-input/custom-input.com
 import { DatePickerComponent } from './components/date-picker/date-picker.component';
 import { SnackbarComponent } from './components/snackbar/snackbar.component';
 import { DialogBoxComponent } from './components/dialog-box/dialog-box.component';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
 import{MatInputModule} from '@angular/material/input'
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
@@ -43,6 +43,10 @@ ReactiveFormsModule
     ReactiveFormsModule,
     CustomInputComponent,
    ChooseQuantityComponent],
+   providers: [
+    {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'fill'}}
+  ]
 
 })
+
 export class SharedModule { }

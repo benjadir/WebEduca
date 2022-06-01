@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<!-- <div class="container-fluid">
   <div class="row d-flex justify-content-between flex-wrap">
     <div class="col col-md-6 col-sm-12 col-12 col-lg-6 rounded-1">
       <img src="../../../../assets/images/element/02.svg" class="col-md-12 col-12">
@@ -28,4 +28,70 @@
     </div>
     </div>
   </div>
+</div> -->
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col col-12 col-md-6 col-lg-6 col-xl-6">
+      <img src="../../../../assets/images/element/02.svg" class="col-md-12 col-12">
+    </div>
+    <div class="col col-12 col-md-6 col-lg-6 col-xl-6 d-flex justify-content-start flex-column align-content-center align-items-center bg-instagram-gradient">
+      <div class="myhead mb-0 mt-2 d-flex justify-content-centers">
+        <mat-icon class="material-icons-outlined">
+        lock_open
+        </mat-icon>
+       <h3>sign up</h3>
+      </div>
+      <div class="from-wrapper">
+        <form [formGroup]="form">
+          <div class="form-group d-flex justify-content-center flex-column">
+            <mat-form-field appearance="outline">
+              <mat-label>Enter your first Name</mat-label>
+              <input matInput placeholder="Enter your first Name" formControlName="fname">
+              <mat-icon matSuffix [ngClass]="{'valid':this.form.controls['fname'].errors==null}">info</mat-icon>
+              <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Enter yourLast Name</mat-label>
+              <input matInput placeholder="Enter yourLast Name" formControlName="lname">
+              <mat-icon matSuffix [ngClass]="{'valid':this.form.controls['lname'].errors==null}">check_circle</mat-icon>
+              <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Enter your Email</mat-label>
+              <input matInput placeholder="Enter your Email" type="email" formControlName="email">
+              <mat-icon matSuffix [ngClass]="{'valid':this.form.controls['email'].errors==null}">check_circle</mat-icon>
+              <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Enter your Password</mat-label>
+              <input matInput type="password" placeholder="Enter your password" formControlName="pass">
+              <mat-icon matSuffix [ngClass]="{'valid':this.form.controls['pass'].errors==null}">check_circle</mat-icon>
+              <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Confirm your password</mat-label>
+              <input matInput type="password" placeholder="confirm your Password" formControlName="repass">
+              <mat-icon matSuffix [ngClass]="{'valid':this.form.controls['repass'].errors==null}">check_circle</mat-icon>
+              <mat-hint><p *ngIf="status;else errorhint">
+                match
+              </p></mat-hint>
+              <ng-template #errorhint>
+               <p class="invalid">don't match try again!</p>
+              </ng-template>
+            </mat-form-field>
+
+          </div>
+          <div class="form-group d-flex justify-content-between">
+            <button type="button" mat-raised-button color="secondary" (click)="onSubmit()">submit</button>
+            <button mat-raised-button color="warn" (click)="resetForm()">reset</button>
+          </div>
+        </form>
+        <a routerLink="/auth/login">have account?</a>
+      </div>
+    </div>
+  </div>
 </div>
+
+

@@ -15,18 +15,19 @@
   <div class="container">
     <div class="nav-flex" #navlabel>
     <div class="overlay"></div>
+    <!-- (click)="navigateToLink('courses')" -->
       <ul class="nav">
-        <li><a routerLink="/home" class="nav-link">Home</a></li>
-        <li><a routerLink="/feature" class="nav-link">Features</a></li>
-        <li><a routerLink="/pricing" class="nav-link">Pricing</a></li>
-        <li><a routerLink="/about" class="nav-link">About</a></li>
-        <li><a routerLink="/about" class="nav-link">services</a></li>
+        <li class="activelink"><a (click)="navigateToLink('/')" routerLinkActive="router-link-active"  class="nav-link">Home</a></li>
+        <li><a (click)="navigateToLink('/courses')" class="nav-link">courses</a></li>
+        <li><a (click)="navigateToLink('/blog')" class="nav-link">blog</a></li>
+        <li><a (click)="navigateToLink('/services')" class="nav-link">services</a></li>
+        <li><a (click)="navigateToLink('/about')" class="nav-link">About</a></li>
       </ul>
         <ul class="nav" id="idauth">
           <li class="">
             <a
             mat-flat-button color="primary"
-            role="button" (click)="redirectReq('login')" [ngClass]="{'active':clickedHere.button1}" class="nav-link">Sign in</a> </li>
+            (click)="redirectReq('login')"[ngClass]="{'active':clickedHere.button1}" class="nav-link">Sign in</a> </li>
           <li><a
             role="button"
             mat-flat-button
@@ -39,4 +40,6 @@
   </div>
 </header>
 
-
+<!----  routerLink="/auth/login"
+ (click)="redirectReq('register')"
+-->
