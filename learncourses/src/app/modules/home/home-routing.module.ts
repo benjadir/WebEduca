@@ -2,7 +2,7 @@ import { AboutComponent } from './about/about.component';
 import { BlogComponent } from './blog/blog.component';
 import { IndexComponent } from './index/index.component';
 import { HomeComponent } from './home.component';
-import { CousesComponent } from './couses/couses.component';
+import { CoursesComponent } from './courses/courses.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ServicesComponent } from './services/services.component';
@@ -17,7 +17,7 @@ const routes: Routes = [
     },
     {
       path: 'courses',
-      component: CousesComponent,
+      component: CoursesComponent,
     },
 
     {

@@ -1,3 +1,4 @@
+import { TestInterceptor } from './core/test.interceptor';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -6,8 +7,9 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeadersModule } from './partials/headers/headers.module';
 import { SharedModule } from './shared/shared.module';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
-
+//providers: [{provide:HTTP_INTERCEPTORS,useClass:TestInterceptor,multi:true}],
 @NgModule({
   declarations: [
     AppComponent
@@ -17,11 +19,11 @@ import { SharedModule } from './shared/shared.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     HeadersModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
 
   ],
 
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

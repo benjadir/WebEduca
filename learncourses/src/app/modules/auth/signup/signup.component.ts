@@ -3,6 +3,7 @@ import { Component, HostBinding, OnInit, ViewEncapsulation } from '@angular/core
 import { FormBuilder, FormControl, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { MatFormFieldControl } from '@angular/material/form-field';
 import { SubjectSubscription } from 'rxjs/internal-compatibility';
+import { AuthenService } from '../authen.service';
 
 
 @Component({
@@ -19,7 +20,7 @@ export class SignupComponent implements OnInit {
   private password:string='';
   status:Boolean=true;
 
-  constructor(private fb:FormBuilder) {
+  constructor(private fb:FormBuilder,private serv:AuthenService) {
     this.form = this.fb.group({
       fname:['',[Validators.required,Validators.maxLength(30),Validators.minLength(3)]],
       lname:['',[Validators.required,Validators.maxLength(30),Validators.minLength(3)]],
@@ -41,14 +42,22 @@ export class SignupComponent implements OnInit {
       }else{
         this.status=false;
       }
-      console.log('errors::',this.form.controls['repass'].errors);
+     // console.log('errors::',this.form.controls['repass'].errors);
      });
 
 
   }
 
   onSubmit(){
-  console.warn(this.form);
+if(this.form.status==='VALID'){
+this.serv.signUp(this.form.controls['email'].value,this.form.controls['pass'].value).subscribe((resp:any)=>{
+  console.log('response::::>',resp);
+},error=>{
+  console.log('myErro:::::>',error);
+})
+//console.log('email:',this.form.controls['email'].value);
+//console.log('passw:',this.form.controls['pass'].value);
+}
 
   }
   resetForm(){}

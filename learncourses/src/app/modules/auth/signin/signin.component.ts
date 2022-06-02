@@ -1,3 +1,4 @@
+import { AuthenService } from './../authen.service';
 import { BehaviorSubject, Observable, Subject, Subscription } from 'rxjs';
 import { Component, HostBinding, OnInit } from '@angular/core';
 import { FormBuilder,FormGroup, Validators, AbstractControl } from '@angular/forms';
@@ -15,7 +16,7 @@ export class SigninComponent implements OnInit {
   private password:string='';
   status:Boolean=true;
 
-  constructor(private fb:FormBuilder) {
+  constructor(private fb:FormBuilder,private srv:AuthenService) {
     this.form = this.fb.group({
       email:['rida.jeba@gmail.com',[Validators.required,Validators.email]],
       pass:['',[Validators.required,Validators.minLength(6)]]
@@ -30,6 +31,11 @@ export class SigninComponent implements OnInit {
 
   onSubmit(){
   console.warn(this.form);
+  this.srv.login(this.form.controls['email'].value,
+  this.form.controls['pass'].value)
+  .subscribe(res=>{
+    console.log(res);
+  })
 
   }
   resetForm(){}

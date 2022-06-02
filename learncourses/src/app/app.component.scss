@@ -1,5 +1,9 @@
+*{
+
+}
 .container-fluid .col-md-12{
-  height: calc(100vh - 44px)!important;
+  min-height: calc(100vh - 44px)!important;;
+  max-height: calc(300vh - 44px)!important;
   background-color: #eeede7!important;
 }
 .auth{
@@ -14,5 +18,5 @@
 
 .appClass{
   width: 40px;
-  background-color: #0048ab;
+  background-color: #eeede7!important;
 }

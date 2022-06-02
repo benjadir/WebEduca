@@ -74,9 +74,10 @@ a.brand{
 
  .nav-flex>ul>li:hover{
   cursor: pointer;
-  background-color: rgba(199, 195, 195, 0.363);
-  border-radius: 2px 2px 0px 0px;
-  box-shadow:0px 20px 0px 0px #c7c3c35d;
+  //background-color: rgba(199, 195, 195, 0.363);
+  background-color: #eeede7!important;
+  border-radius: 0px 10px 0px 0px;
+  box-shadow:0px 6px 0px 0px #eeede7!important;
 
   transition:left .3s ease;
   //
@@ -97,9 +98,9 @@ a.brand{
 // transition: all .2s ease;
 // }
 .nav-flex>ul li.activelink{
-  background-color: rgba(199, 195, 195, 0.363);
-  border-radius: 2px 2px 0px 0px;
-  box-shadow:0px 20px 0px 0px rgba(199, 195, 195, 0.370);
+  background-color: #eeede7!important;
+  border-radius: 0px 10px 0px 0px;
+  box-shadow:0px 6px 0px 0px #eeede7!important;
 }
 
 // .nav-flex>ul>li.activelink::before{

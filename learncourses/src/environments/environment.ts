@@ -4,7 +4,10 @@
 
 export const environment = {
   production: false,
-  apiUrl:'https://webeduca-636ce-default-rtdb.firebaseio.com',
+  apiUrl:'https://webeduca-636ce-default-rtdb.firebaseio.com/',
+  authInUrl:'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword',
+  authupUrl:'https://identitytoolkit.googleapis.com/v1/accounts:signUp'
+
 
 };
 
